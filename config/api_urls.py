@@ -9,6 +9,7 @@ from django.urls import include, path
 from rest_framework.routers import DefaultRouter
 
 from apps.audit.admin_api import AuditLogViewSet
+from apps.blog.admin_api import AdminBlogPostViewSet
 from apps.blog.views import BlogCategoryViewSet, BlogPostViewSet, TagViewSet
 from apps.careers.admin_api import AdminApplicationViewSet
 from apps.careers.views import JobApplicationCreateView, JobOpeningViewSet
@@ -18,9 +19,12 @@ from apps.core.api import OfficeViewSet
 from apps.leads.admin_api import AdminLeadViewSet
 from apps.leads.views import LeadCreateView
 from apps.newsletter import views as newsletter_views
+from apps.projects.admin_api import AdminProjectViewSet
 from apps.projects.views import ProjectCategoryViewSet, ProjectViewSet
 from apps.seo.views import seo_meta
+from apps.team.admin_api import AdminTeamMemberViewSet
 from apps.team.views import TeamMemberViewSet
+from apps.testimonials.admin_api import AdminTestimonialViewSet
 from apps.testimonials.views import TestimonialViewSet
 from apps.users import api as auth_api
 
@@ -48,6 +52,10 @@ admin_router = DefaultRouter(trailing_slash=False)
 admin_router.register("leads", AdminLeadViewSet, basename="admin-leads")
 admin_router.register("applications", AdminApplicationViewSet, basename="admin-applications")
 admin_router.register("audit-logs", AuditLogViewSet, basename="admin-audit")
+admin_router.register("projects", AdminProjectViewSet, basename="admin-projects")
+admin_router.register("blog", AdminBlogPostViewSet, basename="admin-blog")
+admin_router.register("team", AdminTeamMemberViewSet, basename="admin-team")
+admin_router.register("testimonials", AdminTestimonialViewSet, basename="admin-testimonials")
 
 auth_patterns = [
     path("login", auth_api.login, name="login"),
@@ -55,6 +63,8 @@ auth_patterns = [
     path("logout", auth_api.logout, name="logout"),
     path("me", auth_api.me, name="me"),
     path("password/change", auth_api.change_password, name="password-change"),
+    path("password/reset/request", auth_api.password_reset_request, name="password-reset-request"),
+    path("password/reset/confirm", auth_api.password_reset_confirm, name="password-reset-confirm"),
 ]
 
 newsletter_patterns = [

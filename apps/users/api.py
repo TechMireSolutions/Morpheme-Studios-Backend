@@ -23,7 +23,13 @@ from rest_framework_simplejwt.exceptions import TokenError
 from rest_framework_simplejwt.tokens import RefreshToken
 
 from apps.audit import services as audit
-from .serializers import LoginSerializer, PasswordChangeSerializer, UserSerializer
+from .serializers import (
+    LoginSerializer,
+    PasswordChangeSerializer,
+    PasswordResetConfirmSerializer,
+    PasswordResetRequestSerializer,
+    UserSerializer,
+)
 
 COOKIE = settings.JWT_REFRESH_COOKIE
 
@@ -62,6 +68,17 @@ def login(request):
                      target_type="User", target_id=serializer.validated_data["email"])
         return Response({"error": {"code": "invalid_credentials", "message": "Invalid email or password."}},
                         status=status.HTTP_401_UNAUTHORIZED)
+
+    # MFA gate: credentials are correct but a second factor is required. Do NOT
+    # issue tokens here — the client must complete /auth/mfa/verify (TOTP) before
+    # any session token is granted.
+    if getattr(user, "mfa_enabled", False):
+        audit.record(audit.AuditLog.Action.LOGIN, target=user, changes={"mfa": "required"})
+        return Response(
+            {"mfa_required": True, "detail": "Multi-factor verification required.",
+             "user_id": user.id},
+            status=status.HTTP_200_OK,
+        )
 
     refresh = RefreshToken.for_user(user)
     audit.record(audit.AuditLog.Action.LOGIN, target=user)
@@ -132,3 +149,70 @@ def change_password(request):
     user.save(update_fields=["password"])
     audit.record(audit.AuditLog.Action.UPDATE, target=user, changes={"password": "changed"})
     return Response({"status": "password_changed"})
+
+
+@api_view(["POST"])
+@authentication_classes([])
+@permission_classes([AllowAny])
+def password_reset_request(request):
+    serializer = PasswordResetRequestSerializer(data=request.data)
+    serializer.is_valid(raise_exception=True)
+    email = serializer.validated_data["email"].lower()
+    
+    from .models import User
+    user = User.objects.filter(email=email, is_active=True).first()
+    if user:
+        from django.contrib.auth.tokens import default_token_generator
+        from django.utils.http import urlsafe_base64_encode
+        from django.utils.encoding import force_bytes
+        from django.core.mail import send_mail
+        
+        token = default_token_generator.make_token(user)
+        uid = urlsafe_base64_encode(force_bytes(user.pk))
+        reset_link = f"{settings.SITE_URL}/reset-password?uid={uid}&token={token}"
+        
+        subject = "Password Reset Request"
+        body = f"Hello,\n\nYou requested a password reset. Please use the following link to reset your password:\n\n{reset_link}\n\nIf you did not request this, please ignore this email.\n"
+        
+        send_mail(
+            subject,
+            body,
+            settings.DEFAULT_FROM_EMAIL,
+            [user.email],
+            fail_silently=False,
+        )
+        audit.record(audit.AuditLog.Action.UPDATE, target=user, changes={"password_reset": "requested"})
+        
+    return Response({"status": "password_reset_sent"})
+
+
+@api_view(["POST"])
+@authentication_classes([])
+@permission_classes([AllowAny])
+def password_reset_confirm(request):
+    serializer = PasswordResetConfirmSerializer(data=request.data)
+    serializer.is_valid(raise_exception=True)
+    uidb64 = serializer.validated_data["uid"]
+    token = serializer.validated_data["token"]
+    new_password = serializer.validated_data["new_password"]
+    
+    from django.utils.http import urlsafe_base64_decode
+    from django.utils.encoding import force_str
+    from django.contrib.auth.tokens import default_token_generator
+    from .models import User
+    
+    try:
+        uid = force_str(urlsafe_base64_decode(uidb64))
+        user = User.objects.filter(pk=uid, is_active=True).first()
+    except (TypeError, ValueError, OverflowError, User.DoesNotExist):
+        user = None
+        
+    if user is not None and default_token_generator.check_token(user, token):
+        user.set_password(new_password)
+        user.save(update_fields=["password"])
+        audit.record(audit.AuditLog.Action.UPDATE, target=user, changes={"password_reset": "confirmed"})
+        return Response({"status": "password_reset_confirmed"})
+    else:
+        return Response({"error": {"code": "invalid_token", "message": "The reset token is invalid or expired."}},
+                        status=status.HTTP_400_BAD_REQUEST)
+
