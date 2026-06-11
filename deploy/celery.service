@@ -1,0 +1,22 @@
+# systemd unit for the Celery worker (background tasks: emails, etc.).
+# Install to /etc/systemd/system/morpheme-celery.service then:
+#   systemctl enable --now morpheme-celery
+[Unit]
+Description=Morpheme Studios Celery worker
+After=network.target redis-server.service postgresql.service
+Requires=redis-server.service
+
+[Service]
+User=morpheme
+Group=www-data
+WorkingDirectory=/srv/morpheme/backend
+EnvironmentFile=/srv/morpheme/backend/.env
+ExecStart=/srv/morpheme/backend/.venv/bin/celery -A config worker \
+    --loglevel=info \
+    --concurrency=2 \
+    --max-tasks-per-child=200
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

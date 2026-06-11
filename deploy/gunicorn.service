@@ -1,0 +1,25 @@
+# systemd unit for the Django app (gunicorn). Install to
+# /etc/systemd/system/morpheme.service then: systemctl enable --now morpheme
+[Unit]
+Description=Morpheme Studios (Django/gunicorn)
+After=network.target postgresql.service redis-server.service
+Wants=redis-server.service
+
+[Service]
+User=morpheme
+Group=www-data
+WorkingDirectory=/srv/morpheme/backend
+EnvironmentFile=/srv/morpheme/backend/.env
+ExecStart=/srv/morpheme/backend/.venv/bin/gunicorn config.wsgi:application \
+    --bind 127.0.0.1:8000 \
+    --workers 3 \
+    --timeout 60 \
+    --max-requests 1000 \
+    --max-requests-jitter 100 \
+    --access-logfile - \
+    --error-logfile -
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

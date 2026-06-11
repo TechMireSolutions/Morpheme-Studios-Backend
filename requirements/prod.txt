@@ -1,0 +1,2 @@
+-r base.txt
+# Production-only extras can be pinned here (kept minimal; base covers gunicorn/uvicorn).

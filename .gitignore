@@ -1,0 +1,29 @@
+# Environment / secrets — only .env.example is committed
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Databases
+*.sqlite3
+db.sqlite3
+
+# User-uploaded media (kept on the VPS volume, never committed)
+media/
+private-media/
+
+# Collected static
+staticfiles/
+
+# Logs
+*.log
+logs/

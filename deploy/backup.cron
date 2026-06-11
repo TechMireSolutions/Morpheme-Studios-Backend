@@ -1,0 +1,4 @@
+# Morpheme Studios off-box backup — install for the `morpheme` user:
+#   crontab -u morpheme deploy/backup.cron   (or paste into `crontab -e`)
+# Runs daily at 03:15; logs to journald via logger.
+15 3 * * * /srv/morpheme/backend/deploy/backup.sh 2>&1 | /usr/bin/logger -t morpheme-backup

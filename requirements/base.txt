@@ -1,0 +1,32 @@
+# Core
+Django==5.1.6
+djangorestframework==3.15.2
+django-cors-headers==4.6.0
+django-filter==24.3
+
+# Auth / security
+djangorestframework-simplejwt==5.3.1
+argon2-cffi==23.1.0
+django-axes==7.0.0          # login lockout / brute-force protection
+nh3==0.2.18                 # HTML sanitization (stored XSS)
+django-csp==3.8             # Content-Security-Policy
+
+# Database
+psycopg[binary]==3.2.3
+
+# Background tasks / cache (Celery worker + Redis broker & cache)
+celery==5.4.0
+redis==5.2.0
+django-redis==5.4.0
+
+# Media / files
+Pillow==11.0.0
+django-storages==1.14.4     # optional Cloudflare R2 backend
+
+# Config / utils
+django-environ==0.11.2
+gunicorn==23.0.0            # WSGI server behind Nginx
+whitenoise==6.8.2          # static file serving
+
+# Observability
+sentry-sdk==2.18.0
