@@ -1,4 +1,4 @@
-£ Morpheme Studios — VPS Deployment Guide (no Docker)
+# Morpheme Studios — VPS Deployment Guide (no Docker)
 Stack: Ubuntu LTS · PostgreSQL · Redis · Python 3.12 + gunicorn · Celery worker · Nginx + Certbot · static Vite build. No Docker, no ClamAV. Time-consuming work (notification + confirmation emails) is offloaded to a Celery background worker with Redis as broker; Redis also backs the DRF throttle cache. Uploads are validated in-process (type + size + magic bytes).
 
 0. Shape
