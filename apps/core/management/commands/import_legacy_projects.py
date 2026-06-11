@@ -107,7 +107,8 @@ class Command(BaseCommand):
             if "/wp-content/uploads/" not in u:
                 continue
             low = u.lower()
-            if any(x in low for x in ("logo", "favicon", "icon", "placeholder")):
+            # Skip site chrome: WP custom-logo is published as "cropped-*.png".
+            if any(x in low for x in ("logo", "favicon", "icon", "placeholder", "cropped-")):
                 continue
             base = re.sub(r"-\d+x\d+(?=\.\w+($|\?))", "", u)  # collapse thumbnails to original
             if base not in seen:
