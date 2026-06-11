@@ -6,10 +6,19 @@ Dev (`dev.py`) and prod (`prod.py`) layer on top of this module.
 """
 from __future__ import annotations
 
+import mimetypes
 from datetime import timedelta
 from pathlib import Path
 
 import environ
+
+# Some platforms (notably Windows) ship an incomplete mimetypes registry that
+# lacks modern image types, so files served via Django's dev static handler get
+# `application/octet-stream` and, with X-Content-Type-Options: nosniff, fail to
+# render in the browser. Register them explicitly. (Nginx handles this in prod.)
+mimetypes.add_type("image/webp", ".webp")
+mimetypes.add_type("image/avif", ".avif")
+mimetypes.add_type("image/svg+xml", ".svg")
 
 # config/settings/base.py -> config/settings -> config -> <project root>
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
