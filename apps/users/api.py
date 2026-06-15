@@ -137,6 +137,75 @@ def me(request):
 
 
 @api_view(["POST"])
+@authentication_classes([])
+@permission_classes([AllowAny])
+@throttle_classes([LoginThrottle])
+def password_reset_request(request):
+    """Email a signed reset link. Always returns the same response to avoid
+    leaking which emails exist (no account enumeration)."""
+    from django.contrib.auth.tokens import default_token_generator
+    from django.core.mail import send_mail
+    from django.utils.encoding import force_bytes
+    from django.utils.http import urlsafe_base64_encode
+
+    from .models import User
+
+    serializer = PasswordResetRequestSerializer(data=request.data)
+    serializer.is_valid(raise_exception=True)
+    email = serializer.validated_data["email"].lower()
+    user = User.objects.filter(email=email, is_active=True).first()
+    if user is not None:
+        uid = urlsafe_base64_encode(force_bytes(user.pk))
+        token = default_token_generator.make_token(user)
+        link = f"{settings.SITE_URL}/reset-password?uid={uid}&token={token}"
+        try:
+            send_mail(
+                "Reset your Morpheme Studios password",
+                f"Use this link to reset your password (valid for a limited time):\n\n{link}\n",
+                settings.DEFAULT_FROM_EMAIL, [email],
+            )
+        except Exception:  # noqa: BLE001 - never reveal mail failures to the caller
+            pass
+        audit.record(audit.AuditLog.Action.UPDATE, target=user, changes={"password_reset": "requested"})
+    return Response({"status": "password_reset_sent"})
+
+
+@api_view(["POST"])
+@authentication_classes([])
+@permission_classes([AllowAny])
+@throttle_classes([LoginThrottle])
+def password_reset_confirm(request):
+    from django.contrib.auth.password_validation import validate_password
+    from django.contrib.auth.tokens import default_token_generator
+    from django.core.exceptions import ValidationError as DjangoValidationError
+    from django.utils.encoding import force_str
+    from django.utils.http import urlsafe_base64_decode
+
+    from .models import User
+
+    serializer = PasswordResetConfirmSerializer(data=request.data)
+    serializer.is_valid(raise_exception=True)
+    data = serializer.validated_data
+    try:
+        uid = force_str(urlsafe_base64_decode(data["uid"]))
+        user = User.objects.get(pk=uid, is_active=True)
+    except (User.DoesNotExist, ValueError, TypeError, OverflowError):
+        user = None
+    if user is None or not default_token_generator.check_token(user, data["token"]):
+        return Response({"error": {"code": "invalid_token", "message": "Invalid or expired reset link."}},
+                        status=status.HTTP_400_BAD_REQUEST)
+    try:
+        validate_password(data["new_password"], user)
+    except DjangoValidationError as exc:
+        return Response({"error": {"code": "weak_password", "message": " ".join(exc.messages)}},
+                        status=status.HTTP_400_BAD_REQUEST)
+    user.set_password(data["new_password"])
+    user.save(update_fields=["password"])
+    audit.record(audit.AuditLog.Action.UPDATE, target=user, changes={"password": "reset"})
+    return Response({"status": "password_reset_confirmed"})
+
+
+@api_view(["POST"])
 @permission_classes([IsAuthenticated])
 def change_password(request):
     serializer = PasswordChangeSerializer(data=request.data)
@@ -149,70 +218,3 @@ def change_password(request):
     user.save(update_fields=["password"])
     audit.record(audit.AuditLog.Action.UPDATE, target=user, changes={"password": "changed"})
     return Response({"status": "password_changed"})
-
-
-@api_view(["POST"])
-@authentication_classes([])
-@permission_classes([AllowAny])
-def password_reset_request(request):
-    serializer = PasswordResetRequestSerializer(data=request.data)
-    serializer.is_valid(raise_exception=True)
-    email = serializer.validated_data["email"].lower()
-    
-    from .models import User
-    user = User.objects.filter(email=email, is_active=True).first()
-    if user:
-        from django.contrib.auth.tokens import default_token_generator
-        from django.utils.http import urlsafe_base64_encode
-        from django.utils.encoding import force_bytes
-        from django.core.mail import send_mail
-        
-        token = default_token_generator.make_token(user)
-        uid = urlsafe_base64_encode(force_bytes(user.pk))
-        reset_link = f"{settings.SITE_URL}/reset-password?uid={uid}&token={token}"
-        
-        subject = "Password Reset Request"
-        body = f"Hello,\n\nYou requested a password reset. Please use the following link to reset your password:\n\n{reset_link}\n\nIf you did not request this, please ignore this email.\n"
-        
-        send_mail(
-            subject,
-            body,
-            settings.DEFAULT_FROM_EMAIL,
-            [user.email],
-            fail_silently=False,
-        )
-        audit.record(audit.AuditLog.Action.UPDATE, target=user, changes={"password_reset": "requested"})
-        
-    return Response({"status": "password_reset_sent"})
-
-
-@api_view(["POST"])
-@authentication_classes([])
-@permission_classes([AllowAny])
-def password_reset_confirm(request):
-    serializer = PasswordResetConfirmSerializer(data=request.data)
-    serializer.is_valid(raise_exception=True)
-    uidb64 = serializer.validated_data["uid"]
-    token = serializer.validated_data["token"]
-    new_password = serializer.validated_data["new_password"]
-    
-    from django.utils.http import urlsafe_base64_decode
-    from django.utils.encoding import force_str
-    from django.contrib.auth.tokens import default_token_generator
-    from .models import User
-    
-    try:
-        uid = force_str(urlsafe_base64_decode(uidb64))
-        user = User.objects.filter(pk=uid, is_active=True).first()
-    except (TypeError, ValueError, OverflowError, User.DoesNotExist):
-        user = None
-        
-    if user is not None and default_token_generator.check_token(user, token):
-        user.set_password(new_password)
-        user.save(update_fields=["password"])
-        audit.record(audit.AuditLog.Action.UPDATE, target=user, changes={"password_reset": "confirmed"})
-        return Response({"status": "password_reset_confirmed"})
-    else:
-        return Response({"error": {"code": "invalid_token", "message": "The reset token is invalid or expired."}},
-                        status=status.HTTP_400_BAD_REQUEST)
-
