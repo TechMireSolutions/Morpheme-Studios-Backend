@@ -1,0 +1,696 @@
+{
+  "projects": [
+    {
+      "slug": "pynnacles-close-residences",
+      "title": "Pynnacles Close Residences",
+      "location": "London, United Kingdom",
+      "year": "2024",
+      "category": "residential",
+      "type": "Residential",
+      "status": "Completed",
+      "cover": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "excerpt": "A terrace of light-filled homes that negotiate density with generosity — private gardens folded into a restrained brick language.",
+      "services": [
+        "Architecture",
+        "Interior Design",
+        "Landscape"
+      ],
+      "description": "Pynnacles Close reimagines suburban density as something quietly luxurious. Eight homes share a single material palette of handmade brick and bronze, each opening onto a private courtyard that draws daylight deep into the plan."
+    },
+    {
+      "slug": "aesthetics-clinic-kensington",
+      "title": "Aesthetics Clinic",
+      "location": "Kensington, London",
+      "year": "2023",
+      "category": "interior",
+      "type": "Interior",
+      "status": "Completed",
+      "cover": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=80",
+        "/assets/projects/bunify.jpg"
+      ],
+      "excerpt": "A calming, clinical-luxe interior where soft arches and warm stone replace the cold language of the conventional clinic.",
+      "services": [
+        "Interior Design",
+        "Brand Spatial Identity"
+      ],
+      "description": "For a Kensington aesthetics practice we designed an interior that disarms — curved plaster thresholds, hidden lighting and a palette of travertine and oatmeal linen create the calm of a private members club rather than a clinic."
+    },
+    {
+      "slug": "moin-khan-academy",
+      "title": "Moin Khan Cricket Academy",
+      "location": "Karachi, Pakistan",
+      "year": "2023",
+      "category": "architecture",
+      "type": "Architecture",
+      "status": "Completed",
+      "cover": "https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&w=1600&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1600&q=80",
+        "/assets/projects/city-by-sea.jpg"
+      ],
+      "excerpt": "A coastal sports academy shaped by shade, airflow and the long horizontal line of the playing field.",
+      "services": [
+        "Architecture",
+        "Master Planning"
+      ],
+      "description": "Sited on the Karachi coast, the academy is organised around a deep shaded verandah that mediates the harsh climate. Cantilevered canopies frame the pitch while a perforated screen filters the sea light."
+    },
+    {
+      "slug": "mosul-housing-project",
+      "title": "Mosul Housing Project",
+      "location": "Mosul, Iraq",
+      "year": "2024",
+      "category": "competition",
+      "type": "Competition",
+      "status": "Competition — Shortlisted",
+      "cover": "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=80",
+        "/assets/projects/iconic-mosque.webp",
+        "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "excerpt": "A post-conflict housing framework that rebuilds the courtyard typology of the old city at a contemporary scale.",
+      "services": [
+        "Architecture",
+        "Urban Design",
+        "Competition"
+      ],
+      "description": "Our shortlisted proposal for Mosul revives the dense, shaded courtyard urbanism of the historic city — a kit of parts that residents can extend over time, knitting community back into the fabric."
+    },
+    {
+      "slug": "private-residence-mill-park",
+      "title": "Private Residence",
+      "location": "Mill Park",
+      "year": "2022",
+      "category": "residential",
+      "type": "Residential",
+      "status": "Completed",
+      "cover": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1600&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "excerpt": "A family house that opens entirely to its garden — a single sweeping roof unifying living, courtyard and pool.",
+      "services": [
+        "Architecture",
+        "Interior Design"
+      ],
+      "description": "A continuous roof plane folds over a sequence of indoor and outdoor rooms, dissolving the boundary between house and garden. Full-height glazing and a stone spine ground the openness."
+    },
+    {
+      "slug": "iconic-mosque-dubai",
+      "title": "Iconic Mosque",
+      "location": "Dubai, UAE",
+      "year": "2025",
+      "category": "architecture",
+      "type": "Architecture",
+      "status": "In Progress",
+      "cover": "/assets/projects/iconic-mosque.webp",
+      "gallery": [
+        "/assets/projects/iconic-mosque.webp",
+        "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "excerpt": "A contemporary mosque whose folded shell renders light itself as the primary building material.",
+      "services": [
+        "Architecture",
+        "Lighting Design"
+      ],
+      "description": "The prayer hall is wrapped in a single folded concrete shell, perforated to scatter daylight into a slow, shifting pattern across the floor. The minaret is reduced to a pure vertical line of light."
+    },
+    {
+      "slug": "eab-hall-hyde-park",
+      "title": "EAB Hall",
+      "location": "Hyde Park, London",
+      "year": "2023",
+      "category": "arts",
+      "type": "Arts & Design",
+      "status": "Completed",
+      "cover": "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=1600&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=80",
+        "/assets/architecture.jpg"
+      ],
+      "excerpt": "A cultural hall and gallery — a flexible vessel for performance, exhibition and gathering.",
+      "services": [
+        "Architecture",
+        "Arts & Design"
+      ],
+      "description": "EAB Hall is a quietly monumental room: lime-plaster walls, a coffered timber ceiling and a clerestory that washes the space in even northern light, ready for art or assembly."
+    },
+    {
+      "slug": "national-foods-excellence-centre",
+      "title": "National Foods Excellence Centre",
+      "location": "Karachi, Pakistan",
+      "year": "2024",
+      "category": "retail",
+      "type": "Commercial",
+      "status": "In Progress",
+      "cover": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1496307653780-42ee777d4833?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "excerpt": "A corporate centre of excellence combining research kitchens, workplace and brand experience under one expressive roof.",
+      "services": [
+        "Architecture",
+        "Workplace",
+        "Retail"
+      ],
+      "description": "The Excellence Centre brings R&D, hospitality and workplace together around a top-lit atrium, with a tasting theatre and brand journey that turns the building into a marketing instrument."
+    },
+    {
+      "slug": "city-by-the-sea",
+      "title": "City By the Sea",
+      "location": "Karachi, Pakistan",
+      "year": "2025",
+      "category": "architecture",
+      "type": "Master Plan",
+      "status": "In Progress",
+      "cover": "/assets/projects/city-by-sea.jpg",
+      "gallery": [
+        "/assets/projects/city-by-sea.jpg",
+        "https://images.unsplash.com/photo-1496307653780-42ee777d4833?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "excerpt": "A waterfront mixed-use district — living, working and leisure threaded along a new public promenade.",
+      "services": [
+        "Master Planning",
+        "Architecture"
+      ],
+      "description": "Living in a metropolis like Karachi has its own charm and demands. City By the Sea reclaims the waterfront for the public with a promenade that stitches residential towers, retail and parks into one walkable district."
+    },
+    {
+      "slug": "churosity-outlet",
+      "title": "Churosity Outlet",
+      "location": "Karachi, Pakistan",
+      "year": "2022",
+      "category": "retail",
+      "type": "Retail",
+      "status": "Completed",
+      "cover": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1600&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1600&q=80",
+        "/assets/projects/bunify.jpg",
+        "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "excerpt": "A playful dessert outlet — warm terrazzo, brass and a glowing counter built for the queue and the camera.",
+      "services": [
+        "Retail Design",
+        "Interior Design"
+      ],
+      "description": "A compact dessert kiosk concept rolled out across the city: a glowing terrazzo counter, brass trim and a tight, repeatable kit that reads instantly as the brand."
+    },
+    {
+      "slug": "pafsom-club",
+      "title": "PAFSOM Club",
+      "location": "Karachi, Pakistan",
+      "year": "2023",
+      "category": "interior",
+      "type": "Hospitality",
+      "status": "Completed",
+      "cover": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "excerpt": "A members’ club interior balancing grandeur and intimacy across dining, lounge and event spaces.",
+      "services": [
+        "Interior Design",
+        "Hospitality"
+      ],
+      "description": "PAFSOM moves from a soaring double-height lounge to intimate panelled dining rooms, held together by a palette of deep green, walnut and aged brass."
+    },
+    {
+      "slug": "yelo-kiosks",
+      "title": "YELO Ice Cream Kiosks",
+      "location": "Multiple Locations",
+      "year": "2021",
+      "category": "arts",
+      "type": "Product / Retail",
+      "status": "Completed",
+      "cover": "/assets/projects/bunify.jpg",
+      "gallery": [
+        "/assets/projects/bunify.jpg",
+        "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "excerpt": "A modular ice-cream kiosk system — flat-pack, joyful and deployable anywhere in a weekend.",
+      "services": [
+        "Arts & Design",
+        "Product Design"
+      ],
+      "description": "A flat-pack kiosk family for an ice-cream brand: a bright, modular system that ships flat and assembles into a recognisable beacon in any mall or street."
+    },
+    {
+      "slug": "just-baked",
+      "title": "Just Baked",
+      "location": "Karachi, Pakistan",
+      "year": "2022",
+      "category": "retail",
+      "type": "Retail",
+      "status": "Completed",
+      "cover": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1600&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "excerpt": "A warm and inviting bakery interior designed to showcase artisanal products.",
+      "services": [
+        "Interior Design",
+        "Retail"
+      ],
+      "description": "Just Baked is a retail concept that emphasizes the warmth of traditional baking through a contemporary material palette of timber and warm lighting."
+    },
+    {
+      "slug": "residence-42-peachey-lane",
+      "title": "Residence – 42 Peachey Lane",
+      "location": "London, UK",
+      "year": "2023",
+      "category": "residential",
+      "type": "Residential",
+      "status": "Completed",
+      "cover": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "excerpt": "A modern residential project in London focusing on spatial efficiency and natural light.",
+      "services": [
+        "Architecture",
+        "Interior Design"
+      ],
+      "description": "A bespoke residential intervention in London that maximizes living space through clever structural solutions and a restrained material palette."
+    },
+    {
+      "slug": "residence-159-christchurch-avenue",
+      "title": "Residence 159 Christchurch Avenue",
+      "location": "London, UK",
+      "year": "2023",
+      "category": "residential",
+      "type": "Residential",
+      "status": "Completed",
+      "cover": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1600&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "excerpt": "Contemporary living in a historic London neighborhood.",
+      "services": [
+        "Architecture",
+        "Interior Design"
+      ],
+      "description": "This residence balances modern design requirements with the contextual character of Christchurch Avenue, featuring open-plan living and high-end finishes."
+    },
+    {
+      "slug": "residence-157-christchurch-avenue",
+      "title": "Residence 157 Christchurch Avenue",
+      "location": "London, UK",
+      "year": "2023",
+      "category": "residential",
+      "type": "Residential",
+      "status": "Completed",
+      "cover": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1600&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "excerpt": "A sibling project to 159, exploring variations on modern urban living.",
+      "services": [
+        "Architecture",
+        "Interior Design"
+      ],
+      "description": "Part of a series of residential developments, 157 Christchurch Avenue offers a unique take on the contemporary family home in London."
+    },
+    {
+      "slug": "dip-shop-outlets",
+      "title": "Dip Shop – Outlets",
+      "location": "Karachi, Pakistan",
+      "year": "2021",
+      "category": "retail",
+      "type": "Retail",
+      "status": "Completed",
+      "cover": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1600&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1600&q=80",
+        "/assets/projects/bunify.jpg",
+        "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "excerpt": "A bold, scalable retail concept for a specialized dip shop.",
+      "services": [
+        "Retail Design",
+        "Branding"
+      ],
+      "description": "Dip Shop outlets are designed for high-impact visual presence and operational efficiency, featuring a modular counter system and vibrant brand colors."
+    },
+    {
+      "slug": "bunify",
+      "title": "BUNIFY",
+      "location": "Karachi, Pakistan",
+      "year": "2022",
+      "category": "retail",
+      "type": "Retail",
+      "status": "Completed",
+      "cover": "/assets/projects/bunify.jpg",
+      "gallery": [
+        "/assets/projects/bunify.jpg",
+        "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "excerpt": "A playful and modern burger outlet design.",
+      "services": [
+        "Interior Design",
+        "Retail"
+      ],
+      "description": "BUNIFY brings a fresh perspective to fast-casual dining with its industrial-chic interior and focused lighting that highlights the food preparation process."
+    }
+  ],
+  "categories": [
+    {
+      "key": "all",
+      "label": "All Projects"
+    },
+    {
+      "key": "architecture",
+      "label": "Architecture"
+    },
+    {
+      "key": "interior",
+      "label": "Interior Design"
+    },
+    {
+      "key": "residential",
+      "label": "Residential"
+    },
+    {
+      "key": "retail",
+      "label": "Retail & Commercial"
+    },
+    {
+      "key": "arts",
+      "label": "Arts & Design"
+    },
+    {
+      "key": "competition",
+      "label": "Competition"
+    }
+  ],
+  "featured": [
+    "pynnacles-close-residences",
+    "iconic-mosque-dubai",
+    "aesthetics-clinic-kensington",
+    "mosul-housing-project",
+    "national-foods-excellence-centre"
+  ],
+  "blog": [
+    {
+      "slug": "light-as-material",
+      "title": "Light as a Material",
+      "date": "12 May 2026",
+      "category": "Essay",
+      "image": "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1600&q=80",
+      "excerpt": "Why we treat daylight as the first material on every project — and how it shapes plan before form."
+    },
+    {
+      "slug": "mosul-shortlist",
+      "title": "Morpheme Shortlisted for Mosul Housing",
+      "date": "28 Apr 2026",
+      "category": "Studio News",
+      "image": "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=80",
+      "excerpt": "Our courtyard-led proposal for post-conflict housing in Mosul has been shortlisted in the international competition."
+    },
+    {
+      "slug": "the-courtyard-returns",
+      "title": "The Courtyard Returns",
+      "date": "03 Apr 2026",
+      "category": "Essay",
+      "image": "/assets/projects/iconic-mosque.webp",
+      "excerpt": "An old typology for a hot planet: how the courtyard answers climate, privacy and community at once."
+    },
+    {
+      "slug": "studio-dubai",
+      "title": "Breaking Ground in Dubai",
+      "date": "19 Mar 2026",
+      "category": "Studio News",
+      "image": "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=1600&q=80",
+      "excerpt": "Construction begins on the Iconic Mosque — a folded shell that makes light the building’s subject."
+    },
+    {
+      "slug": "materials-we-love",
+      "title": "Five Materials We Keep Returning To",
+      "date": "01 Mar 2026",
+      "category": "Notebook",
+      "image": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1600&q=80",
+      "excerpt": "Handmade brick, travertine, lime plaster, aged brass and oak — a short field guide to the studio palette."
+    },
+    {
+      "slug": "designing-for-wellness",
+      "title": "Designing for Wellness",
+      "date": "14 Feb 2026",
+      "category": "Essay",
+      "image": "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80",
+      "excerpt": "What it really means to put human wellbeing at the centre of a plan, beyond the wellness buzzwords."
+    }
+  ],
+  "services": [
+    {
+      "no": "01",
+      "title": "Architecture Design",
+      "blurb": "At Morpheme Studios is an Architecture and design services.",
+      "image": "/assets/architecture.jpg"
+    },
+    {
+      "no": "02",
+      "title": "Interior Design",
+      "blurb": "Morpheme Studios' interior design team complements our architectural designs with carefully curated interiors.",
+      "image": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1600&q=80"
+    },
+    {
+      "no": "03",
+      "title": "Residential",
+      "blurb": "From designing luxury mansions to crafting modern apartments.",
+      "image": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1600&q=80"
+    },
+    {
+      "no": "04",
+      "title": "Retail & Commercial",
+      "blurb": "Our commercial architectural services are designed to make a lasting impression.",
+      "image": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1600&q=80"
+    },
+    {
+      "no": "05",
+      "title": "Arts & Design",
+      "blurb": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.a",
+      "image": "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=1600&q=80"
+    },
+    {
+      "no": "06",
+      "title": "Competition",
+      "blurb": "We breathe new life into existing structures through thoughtful renovation and restoration.",
+      "image": "/assets/projects/iconic-mosque.webp"
+    }
+  ],
+  "stats": [
+    {
+      "value": "14",
+      "suffix": "+",
+      "label": "Years of practice"
+    },
+    {
+      "value": "120",
+      "suffix": "+",
+      "label": "Projects delivered"
+    },
+    {
+      "value": "3",
+      "suffix": "",
+      "label": "Continents"
+    },
+    {
+      "value": "9",
+      "suffix": "",
+      "label": "Design partners"
+    }
+  ],
+  "team": [
+    {
+      "name": "Aly Naqvi",
+      "role": "Founder, CEO – Architecture & Design",
+      "note": "Aly Naqvi has received his Architectural Design degree in 2011. He has worked with renowned architects and later established an practice at MORPHEME STUDIOS in 2011. He runs the Organization from London Head office.",
+      "image": "/assets/team-placeholder.svg"
+    },
+    {
+      "name": "Imrana Tanveer",
+      "role": "Co-Founder, Executive Director Arts and Design",
+      "note": "Imrana Tanveer has received her Master's degree in Visual Arts. She is responsible for design conceiving, developing, and implementing the artistic vision in a project. Her aim is to amalgamate the different art forms in contemporary design practice.",
+      "image": "/assets/team-placeholder.svg"
+    },
+    {
+      "name": "Abdul Wahid",
+      "role": "Partner, Director North Region – Pakistan",
+      "note": "Abdul Wahid is an Architect and Urbanist. He is Partner North region Pakistan since 2014. He is responsible for Urban, architecture and interior design and envisions contemporary approach towards function, and creativity.",
+      "image": "/assets/team-placeholder.svg"
+    },
+    {
+      "name": "Abbas Naqvi",
+      "role": "Head of Marketing and Procurement",
+      "note": "Abbas Naqvi is a business and Engineering technology graduate. He has worked with a reputed Government organization prior to joining M/S Morpheme Studios in 2019. He is responsible for Marketing and Procurement of High- End businesses.",
+      "image": "/assets/team-placeholder.svg"
+    },
+    {
+      "name": "Juan Y. Calisto",
+      "role": "Partner, Founder OU ADHS – Spain",
+      "note": "Juan Calisto graduated from ETSA Seville – Spain in 2004. He has worked famed architectural offices in Europe and China before setting up COOP Studio in Shanghai & OU ADHS in Estonia. He has partnered with M/S Morpheme Studios in 2019.",
+      "image": "/assets/team-placeholder.svg"
+    },
+    {
+      "name": "Saad Ul Haq",
+      "role": "Partner, Director – MENA Region",
+      "note": "Saad ul Haq is an Architectural graduate with an expertise in BIM architecture and coordination. He has worked in various international organization such as AHR Global. His expertise are in Data center and hospitality projects.",
+      "image": "/assets/team-placeholder.svg"
+    },
+    {
+      "name": "Awais Siddiqi",
+      "role": "Partner, Director Central Region – Pakistan",
+      "note": "Awais Siddiqi is an accomplished designer and planner. He is responsible for Master planning, Project development, and resource management. His major Forte is functional and detail design development for Mega scale projects.",
+      "image": "/assets/team-placeholder.svg"
+    },
+    {
+      "name": "Yumna Asif",
+      "role": "Head of Wellness Space Design",
+      "note": "Yumna Asif has an extensive experience of developing wellness spaces catering natural techniques. Her interest in bringing nature into a place has a unique taste which is appreciated and absorbed into architectural spaces.",
+      "image": "/assets/team-placeholder.svg"
+    },
+    {
+      "name": "Murtaza Bukhari",
+      "role": "Head of Business Development",
+      "note": "Murtaza Bukhari has completed his education in Marine engineering and had been involved in many marine related projects prior to joining us. He is responsible for Hi-end business and portfolio development both in local and international markets.",
+      "image": "/assets/team-placeholder.svg"
+    }
+  ],
+  "offices": [
+    {
+      "city": "London",
+      "country": "United Kingdom",
+      "lines": [
+        "128 City Road",
+        "EC1V 2NX, London"
+      ],
+      "phone": "+44 7713 796960"
+    },
+    {
+      "city": "Ras Al Khaimah",
+      "country": "United Arab Emirates",
+      "lines": [
+        "SMBA0168 Compass Building",
+        "Al Shohada Road",
+        "AL Hamra Industrial Zone-FZ",
+        "Ras Al Khaimah"
+      ],
+      "phone": "+971 — on request"
+    },
+    {
+      "city": "Karachi",
+      "country": "Pakistan",
+      "lines": [
+        "25C/4, 2nd Floor",
+        "Zamzama Comm. Lane 4, DHA V",
+        "Karachi"
+      ],
+      "phone": "+92 — on request"
+    }
+  ],
+  "approach": [
+    {
+      "no": "01",
+      "title": "Listen",
+      "text": "Every project begins with people. We map ambitions, constraints and the unspoken rituals of how a space will be used."
+    },
+    {
+      "no": "02",
+      "title": "Interpret",
+      "text": "We translate brief and site into a clear architectural idea — one strong concept that holds the whole project together."
+    },
+    {
+      "no": "03",
+      "title": "Refine",
+      "text": "Material, light and detail are tested relentlessly, in model and in render, until nothing can be removed."
+    },
+    {
+      "no": "04",
+      "title": "Deliver",
+      "text": "We carry the idea through construction, protecting its integrity from drawing to handover."
+    }
+  ],
+  "jobOpenings": [
+    {
+      "title": "Senior Architect",
+      "place": "London / Dubai",
+      "type": "Full-time"
+    },
+    {
+      "title": "Architectural Assistants Part I & II",
+      "place": "London / Dubai",
+      "type": "Full-time"
+    },
+    {
+      "title": "Interior Designer",
+      "place": "London / Dubai",
+      "type": "Full-time"
+    },
+    {
+      "title": "FF&E Designer",
+      "place": "Dubai",
+      "type": "Full-time"
+    },
+    {
+      "title": "Landscape Architect",
+      "place": "London / Karachi",
+      "type": "Full-time"
+    },
+    {
+      "title": "3D Visualizer",
+      "place": "Remote",
+      "type": "Contract"
+    },
+    {
+      "title": "Business Development Manager",
+      "place": "London / Dubai",
+      "type": "Full-time"
+    },
+    {
+      "title": "Office Manager",
+      "place": "London / Karachi",
+      "type": "Full-time"
+    }
+  ]
+}
