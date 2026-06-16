@@ -1,4 +1,46 @@
-# Morpheme Studios — VPS Deployment Guide (no Docker)
+# Morpheme Studios — Backend (Django + DRF)
+
+Stack: Python 3.12 · Django 5.1 · Django REST Framework · SQLite (local) / PostgreSQL (production). The same code runs on SQLite locally and PostgreSQL in production — it switches automatically based on the `DATABASE_URL` env var (empty = SQLite, set = that database).
+
+---
+
+## Local Development — run it on your machine
+
+> Prerequisites: **Python 3.12** and **Node 20+** installed. Commands below use Windows PowerShell; on macOS/Linux replace `.venv\Scripts\…` with `.venv/bin/…`.
+
+```powershell
+# 1. From the backend folder, create and activate a virtualenv
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+
+# 2. Install dependencies (dev set)
+pip install -r requirements/dev.txt
+
+# 3. Create your local env file. Leaving DATABASE_URL empty makes Django use
+#    the local SQLite file (db.sqlite3) — no PostgreSQL needed for local dev.
+copy .env.example .env
+#    Then open .env and make sure this line is empty:  DATABASE_URL=
+
+# 4. Create the database tables
+python manage.py migrate
+
+# 5. Load the site content (18 projects, team, blog, offices, jobs + media)
+python manage.py import_content --file import_data.json
+
+# 6. Create an admin login (this project logs in by EMAIL, not username)
+python manage.py createsuperuser
+
+# 7. Start the backend on port 8000
+python manage.py runserver 8000
+```
+
+Backend is now at **http://localhost:8000** — API under `/api/v1/`, admin at `/admin/` (log in with the email + password from step 6). Keep this terminal running and start the frontend in a second terminal (see the frontend repo's README).
+
+**Production database:** Operations sets `DATABASE_URL=postgres://…` in the production environment at deploy time; Django then uses Postgres instead of SQLite with no code change. The full production setup (PostgreSQL, Redis, gunicorn, Nginx) is documented below.
+
+---
+
+# Production — VPS Deployment Guide (no Docker)
 Stack: Ubuntu LTS · PostgreSQL · Redis · Python 3.12 + gunicorn · Celery worker · Nginx + Certbot · static Vite build. No Docker, no ClamAV. Time-consuming work (notification + confirmation emails) is offloaded to a Celery background worker with Redis as broker; Redis also backs the DRF throttle cache. Uploads are validated in-process (type + size + magic bytes).
 
 0. Shape
