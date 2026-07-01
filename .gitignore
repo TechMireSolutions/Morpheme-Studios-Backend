@@ -18,8 +18,8 @@ __pycache__/
 db.sqlite3
 
 # User-uploaded media (kept on the VPS volume, never committed)
-media/
-private-media/
+/media/
+/private-media/
 
 # Collected static
 staticfiles/

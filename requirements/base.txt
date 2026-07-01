@@ -12,7 +12,7 @@ nh3==0.2.18                 # HTML sanitization (stored XSS)
 django-csp==3.8             # Content-Security-Policy
 
 # Database
-psycopg[binary]==3.2.3
+psycopg[binary]>=3.2.10
 
 # Background tasks / cache (Celery worker + Redis broker & cache)
 celery==5.4.0
@@ -20,7 +20,7 @@ redis==5.2.0
 django-redis==5.4.0
 
 # Media / files
-Pillow==11.0.0
+Pillow>=11.0.0
 django-storages==1.14.4     # optional Cloudflare R2 backend
 
 # Config / utils
