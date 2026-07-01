@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "django_filters",
     "axes",
+    "drf_spectacular",
     # Local apps
     "apps.core",
     "apps.users",
@@ -186,6 +187,14 @@ REST_FRAMEWORK = {
     },
     "EXCEPTION_HANDLER": "apps.core.exceptions.api_exception_handler",
     "DEFAULT_RENDERER_CLASSES": ("rest_framework.renderers.JSONRenderer",),
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "Morpheme Studios API",
+    "DESCRIPTION": "Backend API for Morpheme Studios frontend and CRM",
+    "VERSION": "1.0.0",
+    "SERVE_INCLUDE_SCHEMA": False,
 }
 
 SIMPLE_JWT = {
